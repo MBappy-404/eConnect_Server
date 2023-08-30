@@ -145,7 +145,7 @@ async function run() {
           app.get('/post/top', async (req, res) => {
                const query = {}
                const cursor = postCollection.find(query);
-               const post = await cursor.sort({ like: -1 }).limit(20).toArray();
+               const post = await cursor.sort({ like: -1 }).toArray();
                res.send(post)
           })
 
